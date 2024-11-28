@@ -1,0 +1,147 @@
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #230030;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background-color: #270040;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #574ae2;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 96%;
+  height: 150px;
+  padding: 15px;
+  background-color: #340452;
+  color: #f8f8f2;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+textarea:focus {
+  background-color: #451365;
+  box-shadow: 0 0 5px #574ae2;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #574ae2;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #b8336a;
+  transform: scale(1.05);
+}
+
+.console {
+  background-color: #230030;
+  color: #f8f8f2;
+  padding: 15px;
+  margin-top: 15px;
+  height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+h2 {
+  font-size: 18px;
+  color: #574ae2;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+      font-size: 26px;
+  }
+
+  textarea {
+      font-size: 15px;
+      height: 130px;
+  }
+
+  button {
+      font-size: 16px;
+  }
+
+  .console {
+      height: 180px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  h1 {
+      font-size: 22px;
+  }
+
+  textarea {
+      font-size: 14px;
+      width: 300px;
+      height: 100px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+
+  .console {
+      height: 150px;
+  }
+
+  h2 {
+      font-size: 14px;
+  }
+}
