@@ -11,14 +11,13 @@ document.getElementById("runButton").addEventListener("click", function () {
 
     function evaluateCode(code) {
         const lines = code.split("\n");
-        // Recorre línea por línea después de darles un salto
+        
         for (let line of lines) {
             line = line.trim();
             
             if (line.startsWith("ptf(") && line.endsWith(")")) {
                 const content = line.slice(4, -1).trim();
                 
-                // Procesar concatenación con +, incluyendo texto, variables y números
                 const parts = content.split("+").map(part => part.trim());
                 let result = "";
 
@@ -38,7 +37,6 @@ document.getElementById("runButton").addEventListener("click", function () {
                 ptf(result);
             }
 
-            // Declaración de variable
             else if (line.startsWith("int ")) {
                 const parts = line.split("=");
                 if (parts.length === 2) {
@@ -52,7 +50,6 @@ document.getElementById("runButton").addEventListener("click", function () {
                 }
             }
 
-            // Condicional if con paréntesis
             else if (line.startsWith("if ") && line.includes("(") && line.includes(")")) {
                 const condition = line.slice(line.indexOf('(') + 1, line.lastIndexOf(')')).trim();
                 
