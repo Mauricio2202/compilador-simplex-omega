@@ -9,6 +9,8 @@
 <body>
     <div class="container">
         <h1>Compilador Simplexito</h1>
+        <p>Simplexito requerirá soporte técnico para teléfonos.</p>
+
         <textarea id="codeInput" placeholder="Escribe tu código aquí..."></textarea>
         <button id="runButton">Compilar</button>
         <div class="console">
@@ -17,6 +19,24 @@
             <!-- Esta etiqueta presenta texto formateado -->
         </div>
     </div>
+    <span class="container-mascota">
+        <div class="exampleCode">
+            ¡Hola soy Crypto! Bienvenido al compilador Simplexito. Te daré un ejemplo de como deberías escribir código:
+            <br><br>
+            ptf("Hola Mundo") --> Compilar
+            <br><br>
+
+            Para declarar variables usarías:
+            <br><br>
+            int a = 5 --> Valores del 0 al 5
+            ptf(a) --> Mostrar el valor de la variable
+            <br><br>
+
+            Si quieres comparar: <br>
+            if(a < 9) --> Devuelve verdadero o falso.
+        </div>
+        <img src="./mascota.png" alt="mascota" class="mascota">
+    </span>
     <script src="compiler.js"></script>
 </body>
 </html>

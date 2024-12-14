@@ -93,6 +93,64 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Estilos base del contenedor */
+.container-mascota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Caja de ejemplo */
+.exampleCode {
+  width: 100%;
+  max-width: 350px;
+  background: rgba(247, 37, 133, 0.3);
+  border: 1px solid #d100d1;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  color: #fff;
+  text-align: left;
+  line-height: 1.4;
+}
+
+p {
+  color: yellow;
+  text-align: center;
+}
+
+/* Imagen de la mascota */
+.mascota {
+  width: 300px; /* Tamaño reducido para móviles */
+  height: auto;
+}
+
+/* Media Query para teléfonos (menos de 480px) */
+@media (max-width: 480px) {
+  .container-mascota {
+    flex-direction: column;
+    gap: 10px; /* Menor espacio entre elementos */
+    padding: 5px;
+  }
+
+  .exampleCode {
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 8px;
+    max-width: 95%;
+    text-align: justify; /* Mejor distribución del texto */
+  }
+
+  .mascota {
+    width: 120px; /* Tamaño más pequeño para ajustarse */
+  }
+}
+
+
 @media (max-width: 768px) {
 
   h1 {
